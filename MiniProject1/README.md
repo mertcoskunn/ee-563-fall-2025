@@ -19,4 +19,8 @@ To test the project, the [Hymenoptera dataset](https://download.pytorch.org/tuto
 - **`/scripts/device_test.py`**  
   Compares CPU and GPU performance.
 
+  ## Note
+  The trained model weights are not included in this repository due to their large file size.
+
+
 
