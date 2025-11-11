@@ -57,7 +57,6 @@ def classify_arm_rotated(image_path):
         else:
             return "None"
 
-
 if __name__ == "__main__":
     # Get image path from command line 
     if len(sys.argv) > 1:
