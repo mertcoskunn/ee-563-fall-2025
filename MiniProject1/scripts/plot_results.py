@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 save_dir = "my_models"
 parent_path = os.path.abspath("..")
-data_path = os.path.join(parent_path, save_dir)
+model_path = os.path.join(parent_path, save_dir)
 
 # ---------- Start ----------
 
@@ -28,7 +28,7 @@ data_path = os.path.join(parent_path, save_dir)
 # for lr in learning_rates:
 #     for mom in momentums:
 #         prefix = f"resnet18_{device}_lr{lr}_mom{mom}"
-#         history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#         history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
         
 #         if os.path.exists(history_path):
 #             with open(history_path, "r") as f:
@@ -47,7 +47,7 @@ data_path = os.path.join(parent_path, save_dir)
 # for lr in learning_rates:
 #     for mom in momentums:
 #         prefix = f"resnet18_{device}_lr{lr}_mom{mom}"
-#         history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#         history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
         
 #         if os.path.exists(history_path):
 #             with open(history_path, "r") as f:
@@ -78,7 +78,7 @@ data_path = os.path.join(parent_path, save_dir)
 
 # for lr in learning_rates:
 #     prefix = f"resnet18_{device}_lr{lr}_mom{momentum_to_plot}"
-#     history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#     history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
     
 #     if os.path.exists(history_path):
 #         with open(history_path, "r") as f:
@@ -100,7 +100,7 @@ data_path = os.path.join(parent_path, save_dir)
 
 # for lr in learning_rates:
 #     prefix = f"resnet18_{device}_lr{lr}_mom{momentum_to_plot}"
-#     history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#     history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
     
 #     if os.path.exists(history_path):
 #         with open(history_path, "r") as f:
@@ -132,7 +132,7 @@ data_path = os.path.join(parent_path, save_dir)
 
 # for b in back_bones:
 #     prefix = f"{b}_{device}_lr{learning_rate}_mom{momentum_to_plot}"
-#     history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#     history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
 
 #     if os.path.exists(history_path):
 #         with open(history_path, "r") as f:
@@ -140,7 +140,7 @@ data_path = os.path.join(parent_path, save_dir)
 #         axes[0].plot(history["val_loss"], label=f"{b}")
 #     else:
 #         prefix = f"{b}_light_{device}_lr{learning_rate}_mom{momentum_to_plot}"
-#         history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#         history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
 
 #         if os.path.exists(history_path):
 #             with open(history_path, "r") as f:
@@ -160,7 +160,7 @@ data_path = os.path.join(parent_path, save_dir)
 
 # for b in back_bones:
 #     prefix = f"{b}_{device}_lr{learning_rate}_mom{momentum_to_plot}"
-#     history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#     history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
 
 #     if os.path.exists(history_path):
 #         with open(history_path, "r") as f:
@@ -168,7 +168,7 @@ data_path = os.path.join(parent_path, save_dir)
 #         axes[1].plot(history["val_acc"], label=f"{b}")
 #     else:
 #         prefix = f"{b}_light_{device}_lr{learning_rate}_mom{momentum_to_plot}"
-#         history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#         history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
 
 #         if os.path.exists(history_path):
 #             with open(history_path, "r") as f:
@@ -202,12 +202,12 @@ data_path = os.path.join(parent_path, save_dir)
 
 # for d, style  in  zip(data_augments_modes, line_styles):
 #     prefix = f"{back_bone}_{d}_{device}_lr{learning_rate}_mom{momentum_to_plot}"  
-#     history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#     history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
     
 #     if not os.path.exists(history_path):
 #         # Eğer o augment mode yoksa fallback olarak _d_ olmayan dosyayı dene
 #         prefix = f"{back_bone}_{device}_lr{learning_rate}_mom{momentum_to_plot}"  
-#         history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#         history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
 
 #     if os.path.exists(history_path):
 #         with open(history_path, "r") as f:
@@ -226,11 +226,11 @@ data_path = os.path.join(parent_path, save_dir)
 
 # for d, style  in  zip(data_augments_modes, line_styles):
 #     prefix = f"{back_bone}_{d}_{device}_lr{learning_rate}_mom{momentum_to_plot}"  
-#     history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#     history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
     
 #     if not os.path.exists(history_path):
 #         prefix = f"{back_bone}_{device}_lr{learning_rate}_mom{momentum_to_plot}"  
-#         history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#         history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
 
 #     if os.path.exists(history_path):
 #         with open(history_path, "r") as f:
@@ -264,7 +264,7 @@ data_path = os.path.join(parent_path, save_dir)
 
 # for opt in optimizers:
 #     prefix = f"{back_bone}_{data_augments_mode}_{opt}_{device}_lr{learning_rate}_mom{momentum_to_plot}"  
-#     history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#     history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
     
 #     if os.path.exists(history_path):
 #         with open(history_path, "r") as f:
@@ -272,7 +272,7 @@ data_path = os.path.join(parent_path, save_dir)
 #         axes[0].plot(history["val_loss"], label=f"Optimizer={opt}")
 #     else:
 #         prefix = f"{back_bone}_{device}_lr{learning_rate}_mom{momentum_to_plot}"  
-#         history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#         history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
         
 #         if os.path.exists(history_path):
 #             with open(history_path, "r") as f:
@@ -289,7 +289,7 @@ data_path = os.path.join(parent_path, save_dir)
 
 # for opt in optimizers:
 #     prefix = f"{back_bone}_{data_augments_mode}_{opt}_{device}_lr{learning_rate}_mom{momentum_to_plot}"  
-#     history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#     history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
     
 #     if os.path.exists(history_path):
 #         with open(history_path, "r") as f:
@@ -297,7 +297,7 @@ data_path = os.path.join(parent_path, save_dir)
 #         axes[1].plot(history["val_acc"], label=f"Optimizer={opt}")
 #     else:
 #         prefix = f"{back_bone}_{device}_lr{learning_rate}_mom{momentum_to_plot}"  
-#         history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+#         history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
         
 #         if os.path.exists(history_path):
 #             with open(history_path, "r") as f:
@@ -336,7 +336,7 @@ for loss in loss_functions:
         prefix = f"{back_bone}_{device}_lr{learning_rate}_mom{momentum_to_plot}"
         label = "Cross Entropy"
 
-    history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+    history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
     if os.path.exists(history_path):
         with open(history_path, "r") as f:
             history = json.load(f)
@@ -360,7 +360,7 @@ for loss in loss_functions:
         prefix = f"{back_bone}_{device}_lr{learning_rate}_mom{momentum_to_plot}"
         label = "Cross Entropy"
 
-    history_path = os.path.join(data_path, f"{prefix}_history_latest.json")
+    history_path = os.path.join(model_path, f"{prefix}_history_latest.json")
     if os.path.exists(history_path):
         with open(history_path, "r") as f:
             history = json.load(f)
