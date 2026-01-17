@@ -1,9 +1,0 @@
-0: a brown table
-1: a green plant
-2: a gray couch
-3: a brown table
-4: a green plant
-5: a black table
-6: a brown lamp
-7: a black and white painting
-8: a black table lamp
